@@ -1,6 +1,6 @@
 "use strict";
 
-import Home from './pages/home.js';
+import Home from './pages/home/home.js';
 import Work from './pages/work.js';
 import Code from './pages/code.js';
 

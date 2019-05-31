@@ -1,10 +1,13 @@
 import copy from 'rollup-plugin-copy';
+import postcss from 'rollup-plugin-postcss';
+import serve from 'rollup-plugin-serve';
+import collectSass from 'rollup-plugin-collect-sass';
 
 export default {
   input: 'src/index.js',
   output: {
     file: 'dist/index.js',
-    format: 'cjs'
+    format: 'iife'
   },
   plugins: [
     copy({
@@ -13,6 +16,17 @@ export default {
         'src/index.css'
       ],
       outputFolder: 'dist'
+    }),
+    postcss({
+      extensions: [ '.css' ],
+      extract: true
+    }),
+    
+    serve({
+      contentBase: 'dist',
+      open: true,
+      host: 'localhost',
+      port: 10001,
     })
   ]
 };

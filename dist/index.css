@@ -1,0 +1,9 @@
+.home .col {
+  height: 70vh;
+  margin-top: 12px; }
+
+.home .col-left {
+  background-color: #2979ff; }
+
+.home .col-right {
+  background-color: #f50057; }
