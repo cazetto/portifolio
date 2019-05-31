@@ -2,12 +2,12 @@ const Header = variables => {
   return {
     render: async () => {
       const view =  `
-      <div class="container is-fluid">
+      <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
 
             <div class="navbar-brand">
               <a class="navbar-item" href="/#/">
-                André Pesci Cazetto
+                CSzTTo
               </a>
               <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>

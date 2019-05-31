@@ -1,13 +1,20 @@
 .home {
   .col {
-    height: 70vh;
     margin-top: 12px;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
   }
 
-  .col-left {
+  .col-blue {
     background-color: #2979ff;
   }
-  .col-right {
+  .col-pink {
     background-color: #f50057;
+  }
+  .col-yellow {
+    background-color: #ffd600;
+  }
+  .col-green {
+    background-color: #00c853;
   }
 }

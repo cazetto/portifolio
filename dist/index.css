@@ -1,9 +1,16 @@
 .home .col {
-  height: 70vh;
-  margin-top: 12px; }
+  margin-top: 12px;
+  padding-top: 20vh;
+  padding-bottom: 20vh; }
 
-.home .col-left {
+.home .col-blue {
   background-color: #2979ff; }
 
-.home .col-right {
+.home .col-pink {
   background-color: #f50057; }
+
+.home .col-yellow {
+  background-color: #ffd600; }
+
+.home .col-green {
+  background-color: #00c853; }

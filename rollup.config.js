@@ -13,7 +13,8 @@ export default {
     copy({
       targets: [
         'src/index.html',
-        'src/index.css'
+        'src/index.css',
+        'src/images'
       ],
       outputFolder: 'dist'
     }),
@@ -21,7 +22,7 @@ export default {
       extensions: [ '.css' ],
       extract: true
     }),
-    
+
     serve({
       contentBase: 'dist',
       open: true,
