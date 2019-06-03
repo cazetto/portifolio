@@ -3,6 +3,7 @@
 import Home from './pages/home/home.js';
 import Work from './pages/work.js';
 import Code from './pages/code.js';
+import Error404 from './pages/404.js'
 
 import Header from './components/header.js';
 import Footer from './components/footer.js';

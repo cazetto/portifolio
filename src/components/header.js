@@ -4,10 +4,9 @@ const Header = variables => {
       const view =  `
       <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
-
             <div class="navbar-brand">
               <a class="navbar-item" href="/#/">
-                CSzTTo
+                KzT.to
               </a>
               <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>

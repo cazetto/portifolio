@@ -1,0 +1,32 @@
+{
+  "brandName": "KzT.to",
+  "appName": "Portifolio",
+  "ownerName": "André Pesci Cazetto",
+  "role": "Front End Developer",
+  "email": "cazetto.andre@gmail.com",
+  "whoAmILabel":"Who am I?",
+  "whoAmIContent":"Ooops, I am a Full Stack Developer... I have developed for about 12 years, with a strong background in Front End but since JavaScript is in Node.js too, I can see it more fun.",
+  "howCanIHelpLabel":"How Can I Help?",
+  "howCanIHelpContent":"I Have extensive knowledge in web development, especially for SPAs, PWAs and Mobile Hybrid Applications using modern JavaScript technologies like React and React Native, GraphQL, Node.js on server-side. Knowledge in functional programming, prototype-based programming and object-oriented programming in JavaScript, SOLID principles and best practices. The ability of design, develop, test, deploy, operate and improve applications based in Javascript.",
+  "skillsLabel": "My Skylls?",
+  "skills": [
+    {"label": "HTML (JSX)", "level": "10"},
+    {"label": "CSS (Pre-Processors and Post-Processors, JSS, Styled Components)", "level": "10"},
+    {"label": "JavaScript (ES6+)", "level": "10"},
+    {"label": "React", "level": "10"},
+    {"label": "Node.js", "level": "10"},
+    {"label": "GraphQL / Apollo / Prisma", "level": "10"},
+    {"label": "RESTful APIs", "level": "10"},
+    {"label": "BDD/TDD", "level": "10"},
+    {"label": "DevOps (Unix, GIT, Nginx, Docker, CI)", "level": "10"},
+    {"label": "Tooling (NPM/Yarn, Webpack, Babel)", "level": "10"}
+  ],
+  "projects": [
+    {"title": "Alaya", "description": ""},
+    {"title": "Back4App Docs", "description": ""},
+    {"title": "Back4App Product", "description": ""},
+    {"title": "Seja Bene Site", "description": ""},
+    {"title": "Lens", "description": ""}
+  ],
+  "contactMeLabel": "Contact Me"
+}

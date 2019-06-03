@@ -2,6 +2,7 @@ import copy from 'rollup-plugin-copy';
 import postcss from 'rollup-plugin-postcss';
 import serve from 'rollup-plugin-serve';
 import collectSass from 'rollup-plugin-collect-sass';
+import uglify from 'rollup-plugin-uglify';
 
 export default {
   input: 'src/index.js',
@@ -14,7 +15,8 @@ export default {
       targets: [
         'src/index.html',
         'src/index.css',
-        'src/images'
+        'src/images',
+        'src/site.config.json'
       ],
       outputFolder: 'dist'
     }),
@@ -28,6 +30,7 @@ export default {
       open: true,
       host: 'localhost',
       port: 10001,
-    })
+    }),
+
   ]
 };
