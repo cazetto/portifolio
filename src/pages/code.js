@@ -1,5 +1,5 @@
-const Code = props => ({
-  render: async () => {
+const Code = () => ({
+  render: async props => {
     return `
       CODE PAGE!!!
     `;

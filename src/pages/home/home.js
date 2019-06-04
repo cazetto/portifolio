@@ -1,12 +1,10 @@
 import generateHTML from './home-html.js';
-import './home.scss';
 import HTTPUtils from '../../utils/HTTPUtils';
 import fetch from 'fetch';
+import style from './home.scss';
 
-const Home = props => ({
-  render: async () => {
-    const response = await fetch('site.config.json');
-    const props = await response.json();
+const Home = () => ({
+  render: async props => {
     return generateHTML(props);
   },
   afterRender: async () => {}

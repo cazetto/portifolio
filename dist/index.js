@@ -5,16 +5,36 @@
 
   const Presentation = () => ({
     render: props => `
-    <div class="columns">
-      <div class="column is-two-fifths has-text-centered col col-blue">
-        <H1 class="title has-text-white-ter">${props.ownerName}</H1>
-        <H2 class="subtitle has-text-grey-lighter">${props.role}</H2>
-      </div>
-      <div class="column col has-text-centered col-pink">
-        <H1 class="title has-text-white-ter">${props.whoAmILabel}</H1>
-        <p class="subtitle has-text-grey-lighter">
-          ${props.whoAmIContent}
-        </p>
+    <div class="container presentation">
+      <div class="columns has-text-centered">
+        <div class="column left-column is-two-fifths">
+          <div class="hero custom-hero is-info">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title p-b-sm">
+                  ${props.ownerName}
+                </h1>
+                <h2 class="subtitle">
+                  ${props.role}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column right-column">
+          <div class="hero custom-hero has-background-white-ter">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title has-text-grey-darker p-b-sm">
+                  ${props.whoAmILabel}
+                </h1>
+                <h2 class="subtitle has-text-grey">
+                  ${props.whoAmIContent}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
@@ -25,12 +45,14 @@
 
   const CanIHelp = () => ({
     render: props => `
-    <div class="columns">
-      <div class="column is-full has-text-centered">
-        <H1 class="title has-text-dark">${props.howCanIHelpLabel}</H1>
-        <p class="subtitle has-text-grey">
+    <div class="hero-body can-i-help">
+      <div class="container has-text-centered">
+        <h1 class="title has-text-grey-darker p-b-md">
+          ${props.howCanIHelpLabel}
+        </h1>
+        <h2 class="subtitle has-text-grey">
           ${props.howCanIHelpContent}
-        </p>
+        </h2>
       </div>
     </div>
   `,
@@ -39,17 +61,30 @@
     }
   );
 
+
+  // <div class="can-i-help columns">
+  //   <div class="column is-full has-text-centered item">
+  //     <H1 class="title has-text-dark">${props.howCanIHelpLabel}</H1>
+  //     <p class="subtitle has-text-grey">
+  //       ${props.howCanIHelpContent}
+  //     </p>
+  //   </div>
+  // </div>
+
   const li = value => `<li>${value}</li>`;
+
   const Skills = () => ({
     render: props => `
-    <div class="columns">
-      <div class="column is-full has-text-centered">
-        <H1 class="title has-text-dark">${props.skillsLabel}</H1>
-        <p class="subtitle has-text-grey">
-          <ul>
+    <div class="hero has-text-centered is-danger skills">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-black-bis">
+            ${props.skillsLabel}
+          </h1>
+          <ul class=" has-text-white-ter">
             ${props.skills.map(skill => li(skill.label)).join([])}
           </ul>
-        </p>
+        </div>
       </div>
     </div>
   `,
@@ -57,15 +92,29 @@
       },
     }
   );
+
+
+  // <div class="columns skills">
+  //   <div class="column is-full has-text-centered item">
+  //     <H1 class="title has-text-dark">${props.skillsLabel}</H1>
+  //     <ul class="has-text-grey">
+  //       ${props.skills.map(skill => li(skill.label)).join([])}
+  //     </ul>
+  //   </div>
+  // </div>
 
   const Contact = () => ({
     render: props => `
-    <div class="columns">
-      <div class="column has-text-centered">
-        <H1 class="title has-text-dark">${props.contactMeLabel}</H1>
-        <p class="subtitle has-text-grey">
-          <a href="mailto:${props.email}">${props.email}</a>
-        </p>
+    <div class="hero custom-hero has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title p-b-sm">
+            ${props.contactMeLabel}
+          </h1>
+          <spam class="subtitle">
+            <a class="has-text-info" href="mailto:${props.email}">${props.email}</a>
+          </spam>
+        </div>
       </div>
     </div>
   `,
@@ -73,6 +122,15 @@
       },
     }
   );
+
+  // <div class="columns">
+  //   <div class="column has-text-centered">
+  //     <H1 class="title has-text-dark">${props.contactMeLabel}</H1>
+  //     <p class="subtitle has-text-grey">
+  //       <a href="mailto:${props.email}">${props.email}</a>
+  //     </p>
+  //   </div>
+  // </div>
 
   const generateHTML = props => (`
 <section class="home container">
@@ -83,28 +141,162 @@
 </section>
 `);
 
-  const Home = props => ({
-    render: async () => {
-      const response = await fetch('site.config.json');
-      const props = await response.json();
+  const Home = () => ({
+    render: async props => {
       return generateHTML(props);
     },
     afterRender: async () => {}
   });
 
-  const Work = props => ({
-    render: async () => {
+  const Work = () => ({
+    render: async props => {
       return `
-      WORK PAGE!!!
+      <div class="work">
+        <div class="container has-text-right">
+
+        <div class="custom-card">
+          <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-size-4">Back4App</p>
+              <p class="subtitle ">React Web App</p>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+          </div>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/back4app.png" alt="Encontra Fluxo">
+            </figure>
+          </div>
+        </div>
+
+        <div class="custom-card">
+          <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-size-4">Alaya Web APP</p>
+              <p class="subtitle ">AngularJS Web App</p>
+              <p class="">A complete ERP.</p>
+            </div>
+          </div>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/alaya-1.png" alt="Alaya App">
+            </figure>
+          </div>
+        </div>
+
+        <div class="custom-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-size-4">Back4App Docs</p>
+                <p class="subtitle">React Project bla bla</p>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/back4app-docs.png" alt="Encontra Fluxo">
+            </figure>
+          </div>
+        </div>
+
+        <div class="custom-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-size-4">Lens PWA</p>
+                <p class="subtitle">React, GraphQL, React Hooks / React Context state management</p>
+                <p class="">A Progressive Web App to share, vote and filter, points of view.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-image">
+
+            <figure class="image is-2by1">
+              <img src="assets/images/lens-1.png" alt="Lens PWA">
+            </figure>
+
+            <figure class="image is-2by1">
+              <img src="assets/images/lens-2.png" alt="Lens PWA">
+            </figure>
+
+            <figure class="image is-2by1">
+              <img src="assets/images/lens-3.png" alt="Lens PWA">
+            </figure>
+          </div>
+        </div>
+
+        <div class="custom-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-size-4">Encontra Fluxo</p>
+                <p class="subtitle">React Native Project bla bla</p>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/encontrafluxo-2.jpg" alt="Encontra Fluxo">
+            </figure>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/encontrafluxo-1.jpg" alt="Encontra Fluxo">
+            </figure>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/encontrafluxo-3.jpg" alt="Encontra Fluxo">
+            </figure>
+          </div>
+        </div>
+
+        <div class="custom-card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-size-4">Seja Bene Site</p>
+                <p class="subtitle">HTML + CSS + JS</p>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="assets/images/sejabene-1.png" alt="SejaBene">
+            </figure>
+
+            <figure class="image is-2by1">
+              <img src="assets/images/sejabene-2.png" alt="SejaBene">
+            </figure>
+
+            <figure class="image is-2by1">
+              <img src="assets/images/sejabene-3.png" alt="SejaBene">
+            </figure>
+
+            <figure class="image is-2by1">
+              <img src="assets/images/sejabene-4.png" alt="SejaBene">
+            </figure>
+          </div>
+        </div>
+
+      </div>
     `;
     },
     afterRender: async () => {
-
     }
+
   });
 
-  const Code = props => ({
-    render: async () => {
+  const Code = () => ({
+    render: async props => {
       return `
       CODE PAGE!!!
     `;
@@ -133,30 +325,26 @@
         const view =  `
       <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/#/">
+              KzT.to
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
+            <div class="navbar-end">
               <a class="navbar-item" href="/#/">
-                KzT.to
+                Home
               </a>
-              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+              <a class="navbar-item" href="/#/work">
+                Work
               </a>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
-              <div class="navbar-end">
-                <a class="navbar-item" href="/#/">
-                  Home
-                </a>
-                <a class="navbar-item" href="/#/work">
-                  Work
-                </a>
-                <a class="navbar-item" href="/#/code">
-                  Code
-                </a>
-              </div>
-            </div>
-
+          </div>
         </nav>
       </div>
       `;
@@ -201,8 +389,9 @@
   };
 
   const Site = {
+    config: null,
     render: async (component, target, variables) => {
-      target.innerHTML = await component.render();
+      target.innerHTML = await component.render(variables);
       await component.afterRender();
     }
   };
@@ -221,28 +410,42 @@
     const request = UrlUtils.getRequest();
     const parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '');
     const Content = routes[parsedURL] ? routes[parsedURL] : Error404;
+    const config = Site.config;
 
     // Render Header
     Site.render(
-      Header({value: 'variable'}),
-      headerContainer
+      Header(),
+      headerContainer,
+      config
     );
 
     // Render Content
     Site.render(
       Content(),
-      contentContainer
+      contentContainer,
+      config
     );
 
     // Render Footer
     Site.render(
       Footer(),
-      footerContainer
+      footerContainer,
+      config
     );
   };
 
+  const useConfig = async () => {
+    const response = await fetch('site.config.json');
+    const config = await response.json();
+    return config;
+  };
+
+  const initialize = async () => {
+    Site.config = await useConfig();
+    router();
+  };
 
   window.addEventListener('hashchange', router);
-  window.addEventListener('load', router);
+  window.addEventListener('load', initialize);
 
 }(fetch));

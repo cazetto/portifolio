@@ -12,12 +12,12 @@ export default {
   },
   plugins: [
     copy({
-      targets: [
-        'src/index.html',
-        'src/index.css',
-        'src/images',
-        'src/site.config.json'
-      ],
+      targets: {
+        'src/index.html': 'dist/index.html',
+        'src/index.css': 'dist/index.css',
+        'src/assets/images': 'dist/assets/images',
+        'src/site.config.json': 'dist/site.config.json'
+      },
       outputFolder: 'dist'
     }),
     postcss({
