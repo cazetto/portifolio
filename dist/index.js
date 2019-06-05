@@ -103,41 +103,11 @@
   //   </div>
   // </div>
 
-  const Contact = () => ({
-    render: props => `
-    <div class="hero custom-hero has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title p-b-sm">
-            ${props.contactMeLabel}
-          </h1>
-          <spam class="subtitle">
-            <a class="has-text-info" href="mailto:${props.email}">${props.email}</a>
-          </spam>
-        </div>
-      </div>
-    </div>
-  `,
-      afterRender: () => {
-      },
-    }
-  );
-
-  // <div class="columns">
-  //   <div class="column has-text-centered">
-  //     <H1 class="title has-text-dark">${props.contactMeLabel}</H1>
-  //     <p class="subtitle has-text-grey">
-  //       <a href="mailto:${props.email}">${props.email}</a>
-  //     </p>
-  //   </div>
-  // </div>
-
   const generateHTML = props => (`
 <section class="home container">
   ${Presentation().render(props)}
   ${CanIHelp().render(props)}
   ${Skills().render(props)}
-  ${Contact().render(props)}
 </section>
 `);
 
@@ -331,11 +301,13 @@
     return {
       render: async props => {
         const view =  `
-      <div class="container">
+      <div class="container header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="/#/">
-              ${props.brandName || props.ownerName}
+              <span class="icon">
+                <i class="fas fa-copyright"></i>
+              </span>&nbsp;${props.brandName || props.ownerName}
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span aria-hidden="true"></span>
@@ -346,9 +318,15 @@
           <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
             <div class="navbar-end">
               <a class="navbar-item" href="/#/">
+                <span class="icon p-r-sm p-l-sm">
+                  <i class="fas fa-coffee" data-fa-transform="rotate-352"></i>
+                </span>&nbsp;
                 Home
               </a>
               <a class="navbar-item" href="/#/work">
+                <span class="icon p-r-sm p-l-sm">
+                  <i class="fas fa-puzzle-piece" data-fa-transform="rotate-8"></i>
+                </span>&nbsp;
                 Work
               </a>
             </div>
@@ -363,12 +341,36 @@
     };
   };
 
-  const Footer = props => ({
-    render: async () => {
+  const Social = () => ({
+    render: props => `
+    <div class="social hero ">
+      <div class="hero-body">
+        <div class="container">
+          <a href="mailto:${props.email}" target="_self" class="icon is-large has-text-black m-l-md" m-r-md>
+            <i class="fas fa-at fa-3x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andrepescicazetto/" target="_blank" class="icon is-large has-text-black m-l-md" m-r-md>
+            <i class="fab fa-linkedin fa-3x"></i>
+          </a>
+          <a href="https://github.com/cazetto" target="_blank" class="icon is-large has-text-black m-l-md" m-r-md>
+            <i class="fab fa-github-alt fa-3x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  `,
+      afterRender: () => {
+      },
+    }
+  );
+
+  const Footer = () => ({
+    render: async props => {
       return `
       <footer class="footer">
         <div class="content has-text-centered">
-          <strong>André Pesci Cazetto - Portifolio</strong>
+          <strong>${props.ownerName} - ${props.appName}</strong>
+          ${Social().render(props)}
         </div>
       </footer>
     `;

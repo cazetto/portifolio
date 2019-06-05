@@ -7,8 +7,8 @@ import Work from './pages/work/work.js';
 import Code from './pages/code.js';
 import Error404 from './pages/404.js'
 
-import Header from './components/header.js';
-import Footer from './components/footer.js';
+import Header from './components/header/header.js';
+import Footer from './components/footer/footer.js';
 
 import URLUtils from './utils/URLUtils.js';
 import HTTPUtils from './utils/HTTPUtils.js';
