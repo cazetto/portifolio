@@ -25,12 +25,12 @@ export default {
       extract: true
     }),
 
-    // serve({
-    //   contentBase: 'dist',
-    //   open: true,
-    //   host: 'localhost',
-    //   port: 10001,
-    // }),
+    serve({
+      contentBase: 'dist',
+      open: true,
+      host: 'localhost',
+      port: 10001,
+    }),
 
   ]
 };
