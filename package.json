@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "test": "jest --verbose"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "rollup": "^1.13.0",
     "rollup-plugin-collect-sass": "^1.0.9",
     "rollup-plugin-copy": "^2.0.1",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-scss": "^1.0.1",

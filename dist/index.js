@@ -141,6 +141,14 @@
 </section>
 `);
 
+  const HTTPUtils = {
+    asyncFetch: async url => {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+  };
+
   const Home = () => ({
     render: async props => {
       return generateHTML(props);
@@ -321,13 +329,13 @@
 
   const Header = variables => {
     return {
-      render: async () => {
+      render: async props => {
         const view =  `
       <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="/#/">
-              KzT.to
+              ${props.brandName || props.ownerName}
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span aria-hidden="true"></span>
@@ -396,6 +404,11 @@
     }
   };
 
+  const initialize = async () => {
+    Site.config = await HTTPUtils.asyncFetch('site.config.json');
+    router();
+  };
+
   const routes = {
     '/': Home,
     '/work': Work,
@@ -432,17 +445,6 @@
       footerContainer,
       config
     );
-  };
-
-  const useConfig = async () => {
-    const response = await fetch('site.config.json');
-    const config = await response.json();
-    return config;
-  };
-
-  const initialize = async () => {
-    Site.config = await useConfig();
-    router();
   };
 
   window.addEventListener('hashchange', router);

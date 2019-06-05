@@ -1,12 +1,12 @@
 const Header = variables => {
   return {
-    render: async () => {
+    render: async props => {
       const view =  `
       <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="/#/">
-              KzT.to
+              ${props.brandName || props.ownerName}
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span aria-hidden="true"></span>

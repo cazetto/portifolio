@@ -11,6 +11,7 @@ import Header from './components/header.js';
 import Footer from './components/footer.js';
 
 import URLUtils from './utils/URLUtils.js';
+import HTTPUtils from './utils/HTTPUtils.js';
 
 import './index.scss';
 
@@ -20,7 +21,12 @@ const Site = {
     target.innerHTML = await component.render(variables);
     await component.afterRender();
   }
-}
+};
+
+const initialize = async () => {
+  Site.config = await HTTPUtils.asyncFetch('site.config.json');
+  router();
+};
 
 const routes = {
   '/': Home,
@@ -59,17 +65,6 @@ const router = async () => {
     config
   );
 };
-
-const useConfig = async () => {
-  const response = await fetch('site.config.json');
-  const config = await response.json();
-  return config;
-}
-
-const initialize = async () => {
-  Site.config = await useConfig();
-  router();
-}
 
 window.addEventListener('hashchange', router);
 window.addEventListener('load', initialize);
