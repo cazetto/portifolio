@@ -1,0 +1,17 @@
+.level-display {
+  .level-bar {
+    display: inline-block;
+    height: 15px;
+    width: 4px !important;
+    background-color: #FFF;
+    opacity: 0.9;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .off {
+    .level-bar {
+      opacity: 0.3;
+    }
+  }
+}

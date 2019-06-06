@@ -71,7 +71,40 @@
   //   </div>
   // </div>
 
-  const li = value => `<li>${value}</li>`;
+  const levelBar = () => `<span class="level-bar"></span>`;
+
+  const listBars = n => [...Array(n).keys()]
+    .map(item => levelBar())
+    .join([]);
+
+  const LevelDisplay = () => ({
+    render: props => `
+    <div class="level-display">
+      <div class="columns">
+        <div class="column is-half has-text-right">
+          <span class="has-text-white">${props.label}</span>
+        </div>
+        <div class="column is-half has-text-left">
+
+
+        <p class="subtitle">
+           ${listBars(+props.level)}<span class="off">${listBars((props.max) - (+props.level))}</span>
+        </p>
+
+
+        </div>
+      </div>
+
+    </div>
+  `,
+      afterRender: () => {
+      },
+    }
+  );
+
+  const skillItem = ({ label, level }) => `<li>
+  ${LevelDisplay().render({ label, level, max: 10 })}
+</li>`;
 
   const Skills = () => ({
     render: props => `
@@ -82,7 +115,7 @@
             ${props.skillsLabel}
           </h1>
           <ul class=" has-text-white-ter">
-            ${props.skills.map(skill => li(skill.label)).join([])}
+            ${props.skills.map(skill => skillItem(skill)).join([], props)}
           </ul>
         </div>
       </div>
@@ -103,11 +136,32 @@
   //   </div>
   // </div>
 
+  const Resume = () => ({
+    render: props => `
+    <div class="hero has-text-centered skills">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-grey-darker p-b-md">
+            Download My Resume
+          <h1>
+          <a href="assets/pdf/Resume-AndréPesciCazetto.pdf" target="_blank" class="icon is-large has-text-black m-l-md" m-r-md>
+            <i class="fas fa-file-alt fa-3x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  `,
+      afterRender: () => {
+      },
+    }
+  );
+
   const generateHTML = props => (`
 <section class="home container">
   ${Presentation().render(props)}
   ${CanIHelp().render(props)}
   ${Skills().render(props)}
+  ${Resume().render(props)}
 </section>
 `);
 
@@ -304,7 +358,7 @@
       <div class="container header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a class="navbar-item" href="/#/">
+            <a class="navbar-item" href="${props.siteUrl}">
               <span class="icon">
                 <i class="fas fa-copyright"></i>
               </span>&nbsp;${props.brandName || props.ownerName}

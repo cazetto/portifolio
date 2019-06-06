@@ -7,7 +7,7 @@ const Header = variables => {
       <div class="container header">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a class="navbar-item" href="/#/">
+            <a class="navbar-item" href="${props.siteUrl}">
               <span class="icon">
                 <i class="fas fa-copyright"></i>
               </span>&nbsp;${props.brandName || props.ownerName}

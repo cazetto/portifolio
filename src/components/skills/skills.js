@@ -1,6 +1,10 @@
 import './skills.scss';
 
-const li = value => `<li>${value}</li>`;
+import LevelDisplay from '../level-display/level-display.js';
+
+const skillItem = ({ label, level }) => `<li>
+  ${LevelDisplay().render({ label, level, max: 10 })}
+</li>`;
 
 const Skills = () => ({
   render: props => `
@@ -11,7 +15,7 @@ const Skills = () => ({
             ${props.skillsLabel}
           </h1>
           <ul class=" has-text-white-ter">
-            ${props.skills.map(skill => li(skill.label)).join([])}
+            ${props.skills.map(skill => skillItem(skill)).join([], props)}
           </ul>
         </div>
       </div>
