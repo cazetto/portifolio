@@ -15,13 +15,9 @@ const LevelDisplay = () => ({
           <span class="has-text-white">${props.label}</span>
         </div>
         <div class="column is-half has-text-left">
-
-
-        <p class="subtitle">
-           ${listBars(+props.level)}<span class="off">${listBars((props.max) - (+props.level))}</span>
-        </p>
-
-
+          <p class="subtitle">
+             ${listBars(+props.level)}<span class="off">${listBars((props.max) - (+props.level))}</span>
+          </p>
         </div>
       </div>
 
