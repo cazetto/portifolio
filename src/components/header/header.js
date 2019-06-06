@@ -28,9 +28,15 @@ const Header = variables => {
               </a>
               <a class="navbar-item" href="/#/work">
                 <span class="icon p-r-sm p-l-sm">
-                  <i class="fas fa-puzzle-piece" data-fa-transform="rotate-8"></i>
+                  <i class="fas fa-laptop" data-fa-transform="rotate-8"></i>
                 </span>&nbsp;
                 Work
+              </a>
+              <a class="navbar-item" href="/#/projects">
+                <span class="icon p-r-sm p-l-sm">
+                  <i class="fas fa-puzzle-piece" data-fa-transform="rotate-12"></i>
+                </span>&nbsp;
+                Projects
               </a>
             </div>
           </div>

@@ -4,7 +4,7 @@ import fetch from 'fetch';
 
 import Home from './pages/home/home.js';
 import Work from './pages/work/work.js';
-import Code from './pages/code.js';
+import Projects from './pages/projects/projects.js';
 import Error404 from './pages/404.js'
 
 import Header from './components/header/header.js';
@@ -31,7 +31,7 @@ const initialize = async () => {
 const routes = {
   '/': Home,
   '/work': Work,
-  '/code': Code,
+  '/projects': Projects,
 };
 
 const router = async () => {

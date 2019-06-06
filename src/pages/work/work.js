@@ -10,8 +10,8 @@ const Work = () => ({
             <div class="media">
               <div class="media-content">
                 <p class="title is-size-4">Back4App</p>
-                <p class="subtitle ">React Web App</p>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <p class="subtitle ">React, AngularJS, RESTful, SASS, Webpack</p>
+                <p class="">I have been implementing new functionality and improving the product using React, site and dashboard made in AngularJS.</p>
               </div>
             </div>
             </div>
@@ -27,8 +27,8 @@ const Work = () => ({
               <div class="media">
                 <div class="media-content">
                   <p class="title is-size-4">Back4App Docs</p>
-                  <p class="subtitle">React Project bla bla</p>
-                  <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                  <p class="subtitle">Jekyll, Liquid, Bootstrap, SASS</p>
+                  <p class="">Documentation of Back4App made with Jekyll.</p>
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Work = () => ({
                 <div class="media-content">
                   <p class="title is-size-4">Welight App</p>
                   <p class="subtitle">React Native</p>
-                  <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                  <p class="">Online shopping application that facilitates donation to NGOs and social and environmental projects. Part of the value of purchases made in more than 1,000 stores and airlines is directed to the Welight partner institutions without changing the value of the product.</p>
                 </div>
               </div>
             </div>
@@ -61,8 +61,8 @@ const Work = () => ({
               <div class="media">
                 <div class="media-content">
                   <p class="title is-size-4">Encontra Fluxo</p>
-                  <p class="subtitle ">A React Native App at Welight Hackathon</p>
-                  <p class="">During the first Virada Sustentável do Rio de Janeiro, Welight realized, in partnership with the Observatory of Slums, a hackathon with young people of all the regions of the city. The goal? Create an app that generates more mobility and collaboration among Rio residents.</p>
+                  <p class="subtitle ">React Native</p>
+                  <p class="">During the first <i>Virada Sustentável do Rio de Janeiro</i>, Welight realized, in partnership with the Observatory of Slums, a hackathon with young people of all the regions of the city. The goal? Create an app that generates more mobility and collaboration among Rio residents.</p>
                 </div>
               </div>
             </div>
@@ -106,13 +106,13 @@ const Work = () => ({
               <div class="media-content">
                 <p class="title is-size-4">Alaya Web APP</p>
                 <p class="subtitle ">AngularJS Web App</p>
-                <p class="">A complete ERP.</p>
+                <p class="">A complete ERP to manage the company Alaya Ecoturismo, made using AngularJS, SASS accessing data through a REST service.</p>
               </div>
             </div>
             </div>
             <div class="card-image">
               <figure class="image">
-                <img src="assets/images/alaya-1.png" alt="Alaya App">
+                <img src="assets/images/alaya.png" alt="Alaya App">
               </figure>
             </div>
           </div>
@@ -123,7 +123,7 @@ const Work = () => ({
                 <div class="media-content">
                   <p class="title is-size-4">Seja Bene Site</p>
                   <p class="subtitle">HTML + CSS + JS</p>
-                  <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                  <p class="">Site made using HTML CSS and Java-Script</p>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ const Work = () => ({
               <div class="media">
                 <div class="media-content">
                   <p class="title is-size-4">Clube Pharmaton</p>
-                  <p class="subtitle">Lorem ipsum dolor sit amet</p>
+                  <p class="subtitle">Flash, ActionScript 3</p>
                   <p class="">Pharmaton Club was a simple, functional and refined way to make people feel better. As well as does Pharmaton itself, it helped users to keep your vitality and reduce daily stress. With an incredible interactive infographic, it asked everyone how they were, compared the result with the avarage and finally gave illustred suggestions for them to get a better life</p>
                 </div>
               </div>
@@ -160,30 +160,3 @@ const Work = () => ({
 });
 
 export default Work;
-
-
-// <div class="custom-card">
-//   <div class="card-content">
-//     <div class="media">
-//       <div class="media-content">
-//         <p class="title is-size-4">Lens PWA</p>
-//         <p class="subtitle">React, GraphQL, React Hooks / React Context state management</p>
-//         <p class="">A Progressive Web App to share, vote and filter, points of view.</p>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="card-image">
-//
-//     <figure class="image">
-//       <img src="assets/images/lens-1.png" alt="Lens PWA">
-//     </figure>
-//
-//     <figure class="image">
-//       <img src="assets/images/lens-2.png" alt="Lens PWA">
-//     </figure>
-//
-//     <figure class="image">
-//       <img src="assets/images/lens-3.png" alt="Lens PWA">
-//     </figure>
-//   </div>
-// </div>
