@@ -70,7 +70,7 @@ const Work = () => ({
               <div class="column is-half">
                 <div class="card-image">
                   <figure class="image">
-                    <img src="assets/images/encontra-fluxo-3.jpg" alt="Encontra Fluxo">
+                    <img src="assets/images/encontra-fluxo-3.png" alt="Encontra Fluxo">
                   </figure>
                 </div>
               </div>
@@ -86,14 +86,14 @@ const Work = () => ({
               <div class="column is-half">
                 <div class="card-image">
                   <figure class="image">
-                    <img src="assets/images/encontra-fluxo-1.jpg" alt="Encontra Fluxo">
+                    <img src="assets/images/encontra-fluxo-fb.png" alt="Encontra Fluxo">
                   </figure>
                 </div>
               </div>
               <div class="column is-half">
                 <div class="card-image">
                   <figure class="image">
-                    <img src="assets/images/encontra-fluxo.png" alt="Encontra Fluxo">
+                    <img src="assets/images/encontra-fluxo-1.jpg" alt="Encontra Fluxo">
                   </figure>
                 </div>
               </div>
