@@ -32,12 +32,6 @@ const Header = variables => {
                 </span>&nbsp;
                 Work
               </a>
-              <a class="navbar-item" href="/#/projects">
-                <span class="icon p-r-sm p-l-sm">
-                  <i class="fas fa-puzzle-piece" data-fa-transform="rotate-12"></i>
-                </span>&nbsp;
-                Projects
-              </a>
             </div>
           </div>
         </nav>
