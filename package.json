@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "build": "NODE_ENV=production rollup -c",
     "test": "jest --verbose"
   },
   "dependencies": {
