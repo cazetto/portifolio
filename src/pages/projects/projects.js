@@ -22,13 +22,6 @@ const Projects = () => ({
                 <img src="assets/images/lens-1.png" alt="Lens PWA">
               </figure>
 
-              <figure class="image">
-                <img src="assets/images/lens-2.png" alt="Lens PWA">
-              </figure>
-
-              <figure class="image">
-                <img src="assets/images/lens-3.png" alt="Lens PWA">
-              </figure>
             </div>
           </div>
 

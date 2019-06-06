@@ -80,11 +80,11 @@
   const LevelDisplay = () => ({
     render: props => `
     <div class="level-display">
-      <div class="columns">
-        <div class="column is-half has-text-right">
+      <div class="cols">
+        <div class="col has-text-right">
           <span class="has-text-white">${props.label}</span>
         </div>
-        <div class="column is-half has-text-left">
+        <div class="col has-text-left">
           <p class="subtitle">
              ${listBars(+props.level)}<span class="off">${listBars((props.max) - (+props.level))}</span>
           </p>
@@ -110,7 +110,7 @@
           <h1 class="title has-text-black-bis">
             ${props.skillsLabel}
           </h1>
-          <ul class=" has-text-white-ter">
+          <ul class=" has-text-white-ter has-text-centered">
             ${props.skills.map(skill => skillItem(skill)).join([], props)}
           </ul>
         </div>
@@ -130,7 +130,7 @@
           <h1 class="title has-text-grey-darker p-b-md">
             Download My Resume
           <h1>
-          <a href="assets/pdf/Resume-AndréPesciCazetto.pdf" target="_blank" class="icon is-large has-text-black m-l-md" m-r-md>
+          <a href="https://drive.google.com/file/d/1DGVKcHge1GuIng1RSmLFraHpnTVrgEEi/view?usp=sharing" target="_blank" class="icon is-large has-text-black m-l-md" m-r-md>
             <i class="fas fa-file-alt fa-3x"></i>
           </a>
         </div>
@@ -347,13 +347,6 @@
                 <img src="assets/images/lens-1.png" alt="Lens PWA">
               </figure>
 
-              <figure class="image">
-                <img src="assets/images/lens-2.png" alt="Lens PWA">
-              </figure>
-
-              <figure class="image">
-                <img src="assets/images/lens-3.png" alt="Lens PWA">
-              </figure>
             </div>
           </div>
 
@@ -410,12 +403,6 @@
                   <i class="fas fa-laptop" data-fa-transform="rotate-8"></i>
                 </span>&nbsp;
                 Work
-              </a>
-              <a class="navbar-item" href="/#/projects">
-                <span class="icon p-r-sm p-l-sm">
-                  <i class="fas fa-puzzle-piece" data-fa-transform="rotate-12"></i>
-                </span>&nbsp;
-                Projects
               </a>
             </div>
           </div>

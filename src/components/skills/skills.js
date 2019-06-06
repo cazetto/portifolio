@@ -14,7 +14,7 @@ const Skills = () => ({
           <h1 class="title has-text-black-bis">
             ${props.skillsLabel}
           </h1>
-          <ul class=" has-text-white-ter">
+          <ul class=" has-text-white-ter has-text-centered">
             ${props.skills.map(skill => skillItem(skill)).join([], props)}
           </ul>
         </div>
