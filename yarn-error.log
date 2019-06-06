@@ -21,7 +21,7 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "dev": "rollup -c -w",
-      "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+      "build": "NODE_ENV=production rollup -c",
       "test": "jest --verbose"
     },
     "dependencies": {
@@ -5925,7 +5925,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit signal: SIGSEGV
+  Exit code: 1
   Command: sh
   Arguments: -c rollup -c -w
   Directory: /Users/andrepescicazetto/Work/portifolio
