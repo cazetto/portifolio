@@ -40,6 +40,14 @@ const Header = variables => {
       return view;
     },
     afterRender: async () => {
+      let navbarMenu = document.querySelector('.navbar-menu');
+      navbarMenu.style.display = 'none';
+      let burger = document.querySelector('.burger');
+      let burgerHandleClick = () => {
+        navbarMenu.style.display = (navbarMenu.style.display === 'block') ? 'none' : 'block';
+        console.log('burgerHandleClick');
+      };
+      burger.addEventListener('click', burgerHandleClick);
     },
   };
 };
