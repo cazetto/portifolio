@@ -177,7 +177,7 @@
               <div class="media-content">
                 <p class="title is-size-4">Back4App</p>
                 <p class="subtitle ">React, AngularJS, RESTful, SASS, Webpack</p>
-                <p class="">I have been implementing new functionality and improving the product using React, site and dashboard made in AngularJS.</p>
+                <p class="">Implementation of new functionalities and improving the product using React, the site and dashboard made in AngularJS.</p>
               </div>
             </div>
             </div>
@@ -412,14 +412,19 @@
         return view;
       },
       afterRender: async () => {
-        let navbarMenu = document.querySelector('.navbar-menu');
-        navbarMenu.style.display = 'none';
         let burger = document.querySelector('.burger');
         let burgerHandleClick = () => {
           navbarMenu.style.display = (navbarMenu.style.display === 'block') ? 'none' : 'block';
-          console.log('burgerHandleClick');
         };
         burger.addEventListener('click', burgerHandleClick);
+        let navbarMenu = document.querySelector('.navbar-menu');
+        let navBarMenuDisplayStyle = navbarMenu.style.display;
+        let setDisplayStyle = () => {
+          console.log('', window.innerWidth);
+          navbarMenu.style.display = window.innerWidth < 1024 ? 'none' : navBarMenuDisplayStyle;
+        };
+        setDisplayStyle();
+        window.onresize = () => setDisplayStyle();
       },
     };
   };
