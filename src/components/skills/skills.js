@@ -27,13 +27,3 @@ const Skills = () => ({
 );
 
 export default Skills;
-
-
-// <div class="columns skills">
-//   <div class="column is-full has-text-centered item">
-//     <H1 class="title has-text-dark">${props.skillsLabel}</H1>
-//     <ul class="has-text-grey">
-//       ${props.skills.map(skill => li(skill.label)).join([])}
-//     </ul>
-//   </div>
-// </div>
