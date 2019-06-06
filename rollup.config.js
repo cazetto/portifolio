@@ -16,6 +16,7 @@ export default {
         'src/index.html': 'dist/index.html',
         'src/index.css': 'dist/index.css',
         'src/assets/images': 'dist/assets/images',
+        'src/assets/pdf': 'dist/assets/pdf',
         'src/site.config.json': 'dist/site.config.json'
       },
       outputFolder: 'dist'
@@ -25,12 +26,12 @@ export default {
       extract: true
     }),
 
-    // serve({
-    //   contentBase: 'dist',
-    //   open: true,
-    //   host: 'localhost',
-    //   port: 10001,
-    // }),
+    serve({
+      contentBase: 'dist',
+      open: true,
+      host: 'localhost',
+      port: 10001,
+    }),
 
   ]
 };
