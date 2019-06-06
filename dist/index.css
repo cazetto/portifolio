@@ -53,6 +53,9 @@
 .header .navbar {
   padding-right: 12px; }
 
+.header .navbar.open .navbar-menu {
+  display: none; }
+
 .footer {
   margin-bottom: 0;
   padding-bottom: 0 !important; }
