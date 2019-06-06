@@ -177,7 +177,7 @@
               <div class="media-content">
                 <p class="title is-size-4">Back4App</p>
                 <p class="subtitle ">React, AngularJS, RESTful, SASS, Webpack</p>
-                <p class="">I have been implementing new functionality and improving the product using React, site and dashboard made in AngularJS.</p>
+                <p class="">Implementation of new functionalities and improving the product using React, the site and dashboard made in AngularJS.</p>
               </div>
             </div>
             </div>
