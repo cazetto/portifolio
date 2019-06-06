@@ -26,12 +26,12 @@ export default {
       extract: true
     }),
 
-    serve({
+    (process.env.NODE_ENV !== 'production' && serve({
       contentBase: 'dist',
       open: true,
       host: 'localhost',
       port: 10001,
-    }),
+    })),
 
   ]
 };
