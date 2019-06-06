@@ -412,14 +412,19 @@
         return view;
       },
       afterRender: async () => {
-        let navbarMenu = document.querySelector('.navbar-menu');
-        navbarMenu.style.display = 'none';
         let burger = document.querySelector('.burger');
         let burgerHandleClick = () => {
           navbarMenu.style.display = (navbarMenu.style.display === 'block') ? 'none' : 'block';
-          console.log('burgerHandleClick');
         };
         burger.addEventListener('click', burgerHandleClick);
+        let navbarMenu = document.querySelector('.navbar-menu');
+        let navBarMenuDisplayStyle = navbarMenu.style.display;
+        let setDisplayStyle = () => {
+          console.log('', window.innerWidth);
+          navbarMenu.style.display = window.innerWidth < 1024 ? 'none' : navBarMenuDisplayStyle;
+        };
+        setDisplayStyle();
+        window.onresize = () => setDisplayStyle();
       },
     };
   };
