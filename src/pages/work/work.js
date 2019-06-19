@@ -138,6 +138,23 @@ const Work = () => ({
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
+                  <p class="title is-size-4">Relatório de Sustentabilidade Copersucar</p>
+                  <p class="subtitle">AngularJS + SCSS</p>
+                  <p class="">A static site made with AngularJS and SCSS</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-image">
+              <figure class="image">
+                <img src="assets/images/copersucar.png" alt="SejaBene">
+              </figure>
+            </div>
+          </div>
+
+          <div class="custom-card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
                   <p class="title is-size-4">Clube Pharmaton</p>
                   <p class="subtitle">Flash, ActionScript 3</p>
                   <p class="">Pharmaton Club was a simple, functional and refined way to make people feel better. As well as does Pharmaton itself, it helped users to keep your vitality and reduce daily stress. With an incredible interactive infographic, it asked everyone how they were, compared the result with the avarage and finally gave illustred suggestions for them to get a better life</p>

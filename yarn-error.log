@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/andrepescicazetto/.nvm/versions/node/v12.4.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /Users/andrepescicazetto/.nvm/versions/node/v12.4.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js develop
 
 PATH: 
   /Users/andrepescicazetto/.nvm/versions/node/v12.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -5924,7 +5924,7 @@ Lockfile:
       yargs-parser "^5.0.0"
 
 Trace: 
-  Error: Command "start" not found.
+  Error: Command "develop" not found.
       at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
       at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:87307:17
       at Generator.next (<anonymous>)
