@@ -6,9 +6,9 @@
   "email": "cazetto.andre@gmail.com",
   "siteUrl": "https://cazetto.netlify.com/",
   "whoAmILabel":"Who am I?",
-  "whoAmIContent":"I am an enthusiastic software developer and I have been developing for the web for about 12 years. I act as Front End specialist and I understand a bit of Back End too.",
+  "whoAmIContent":"I have been a software developer for over ten years, with solid knowledge of internet, javascript and frameworks / libs, working mainly in the front end but also in the back end.",
   "howCanIHelpLabel":"How Can I Help?",
-  "howCanIHelpContent":"I have extensive knowledge in web development, especially for SPAs, PWAs and Mobile Hybrid Applications using modern JavaScript technologies like React and React Native, GraphQL, Node.js on server-side. Knowledge in functional programming, prototype-based programming and object-oriented programming in JavaScript, SOLID principles and best practices. The ability of design, develop, test, deploy, operate and improve applications based in Javascript.",
+  "howCanIHelpContent":"I have extensive knowledge in web development, especially for SPAs, PWAs and Mobile Hybrid Applications using modern JavaScript technologies like React and React Native, GraphQL, Node.js. Knowledge in functional programming, prototype-based programming and object-oriented programming in JavaScript, SOLID principles and best practices. The ability of design, develop, test, deploy, operate and improve applications based in Javascript.",
   "skillsLabel": "My Skills",
   "skills": [
     {"label": "HTML", "level": "8"},
