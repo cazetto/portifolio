@@ -16,7 +16,7 @@
     "jest": "^24.8.0",
     "live-server": "^1.2.1",
     "masonry-layout": "^4.2.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "rollup": "^1.13.0",
     "rollup-plugin-collect-sass": "^1.0.9",
     "rollup-plugin-copy": "^2.0.1",
